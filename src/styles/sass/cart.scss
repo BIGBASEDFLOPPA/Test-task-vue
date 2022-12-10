@@ -1,0 +1,46 @@
+@import "./_btn";
+.container{
+  display: flex;
+  margin: 10px;
+  padding:10px;
+.cart{
+  border:solid grey 1px;
+  &__header{
+    &_cart-title{
+      position: relative;
+      font-size: 32px;
+      font-variant: small-caps;
+      font-weight: bold;
+    }
+    &_item-quantity{
+      position: relative;
+      color: #6E6E6E;
+    }
+    &_delete-all-cart{
+      right:-50%;
+      position: relative;
+      cursor: pointer;
+      color: #6E6E6E;
+      text-decoration: underline
+    }
+  }
+  &__body{
+    &_item{
+      border-bottom: 2px solid #9491A3;
+      padding: 5%;
+    }
+
+  }
+  &__footer{
+
+  }
+}
+}
+.card-total{
+  flex:1;
+  border:solid grey 1px;
+  &__counting-money{
+    font-weight: bold;
+    border-bottom: solid #9491A3 1px ;
+  }
+}

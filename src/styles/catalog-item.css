@@ -1,0 +1,23 @@
+
+.catalog-item{
+    flex-basis: 25%;
+    box-shadow: -2px 1px 16px -6px rgba(34, 60, 80, 0.3);
+    padding: 10px;
+    margin:14px;
+}
+.catalog-item__image{
+    width:250px;
+}
+.catalog-item__name{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    word-spacing: -1px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
