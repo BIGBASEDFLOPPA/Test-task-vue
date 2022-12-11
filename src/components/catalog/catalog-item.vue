@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import "../../styles/catalog-item.css"
-import "../../styles/btn.css"
 
 export default {
   name: 'catalog-item',
@@ -33,6 +31,7 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+@import "../../styles/button/btn.scss";
+@import "../../styles/catalog/catalog-item.scss";
 </style>

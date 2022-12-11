@@ -1,19 +1,16 @@
 <template>
   <div class="container">
-    <div class="cart-item">
-    <img class="catalog-item__image" :src="cart_item_data.url" alt="img">
-      <div class="card-data__item">
-        <div class="card--title">
-          <p class="card--title__desc">{{ cart_item_data.name }}</p>
-        </div>
-        <div class="card__body">
-<!--          <p >{{ cart_item_data.desc }}</p>-->
-          <p>Кол-во {{ cart_item_data.quantity }} // добавить описание </p>
-        </div>
-        <div class="card__footer">
-          <p >{{ cart_item_data.article  }} // стоимость</p>
-          <button> Подробнее </button>
-        </div>
+    <div class="container__cart-item-viewed">
+      <img class="cart-item-viewed__image" :src="cart_item_data.url" alt="img">
+      <div class="card--title">
+        <p class="cart-item-viewed__name">{{ cart_item_data.name }}</p>
+      </div>
+      <div class="cart-item-viewed__body">
+        <p> {{ cart_item_data.description }}</p>
+      </div>
+      <div class="cart-item-viewed__footer">
+        <p>{{ cart_item_data.price }} РУБ/шт</p>
+        <button class="btn"> Подробнее</button>
       </div>
     </div>
   </div>
@@ -26,7 +23,8 @@ export default {
   props: {
     cart_item_data: {
       type: Object,
-      default: () => {},
+      default: () => {
+      },
     }
   },
   methods: {
@@ -49,4 +47,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../styles/cart/cartItemViewed";
+@import "../../styles/button/btn.scss";
 </style>

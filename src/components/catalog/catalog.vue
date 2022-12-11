@@ -1,7 +1,12 @@
 <template>
   <div class="catalog">
-    <router-link :to="{name:'cart',params: {CART}}">
-      <div class="catalog__count catalog--button">Cart: {{ CART.length }}</div>
+    <router-link  :to="{name:'cart',params: {CART}}">
+      <div class='catalog__link-to-cart'>
+        <div class="catalog__count catalog--button">
+          <p class="catalog__link-to-cart_cart-name">Ваша корзина</p>
+          <p class="catalog__link-to-cart_cart-value">товаров на сумму: {{ getOrderCost() }} </p>
+        </div>
+      </div>
     </router-link>
     <h1>Catalog</h1>
 
@@ -21,6 +26,7 @@
 
 import {mapActions, mapGetters} from 'vuex'
 import catalogItem from "@/components/catalog/catalog-item";
+import '../../styles/catalog/catalog.scss';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -30,7 +36,8 @@ export default {
   },
   props: {},
   data() {
-    return {}
+    return {
+    }
   },
   methods: {
     ...mapActions([
@@ -39,6 +46,17 @@ export default {
     ]),
     addToCart(data) {
       this.ADD_TO_CART(data)
+    },
+    cartTotalCost() {
+      let result = 0;
+      if(this.CART.length)
+        result = this.CART?.reduce((sum, item) =>  sum + item?.quantity, 0 );
+      return result;
+    },
+    getOrderCost() {
+      const  orderCost = this.CART?.reduce(
+          (sum, cart) => sum + cart.quantity * cart.price, 0);
+      return orderCost;
     }
   },
   computed: {
@@ -46,7 +64,7 @@ export default {
       'PRODUCTS',
       'CART'
 
-    ])
+    ]),
   },
   mounted() {
     this.GET_PRODUCTS_FROM_API();
@@ -55,5 +73,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/catalog.scss';
+@import '../../styles/catalog/catalog.scss';
 </style>

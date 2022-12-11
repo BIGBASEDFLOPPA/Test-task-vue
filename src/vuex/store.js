@@ -38,9 +38,6 @@ export default createStore({
                 state.cart.push(newObj)
             }
 
-            // SET_CART:(state,product)=>{
-            //   state.cart.push(product,{quantity:1})
-
         },
         REMOVE_FROM_CART: (state, index) => {
             state.cart.splice(index, 1);
@@ -73,17 +70,18 @@ export default createStore({
                     return err;
                 })
         },
-          SEND_CART_TO_SERVER(state){
-             state.jsonCart = JSON.stringify(state.cart);
-             return axios.post('https://my-json-server.typicode.com/typicode/demo',{
-               Body: this.state.cart
+        SEND_CART_TO_SERVER(state) {
+            state.jsonCart = JSON.stringify(state.cart);
+            return axios.post('https://my-json-server.typicode.com/BIGBASEDFLOPPA/Test-task-vue', {
+                Body: this.state.cart
             })
-                 .then(response=>{})
-                 .catch((error)=>{
-                     console.log(error)
-                     return error;
-                 })
-          },
+                .then(response => {
+                })
+                .catch((error) => {
+                    console.log(error)
+                    return error;
+                })
+        },
         ADD_TO_CART({commit}, product) {
             commit('SET_CART', product)
         },

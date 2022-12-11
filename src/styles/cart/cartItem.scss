@@ -1,26 +1,84 @@
 .container {
+  width: 800px;
+  height: 121px;
+
   .cart-item {
-    display:flex;
-    box-shadow: 0 0 8px 0 #e0e0e0;
+    display: flex;
+
 
     .catalog-item__image {
-    max-width: 250px;
+      margin-left: 15px;
+      width: 100px;
+      height: 100px;
     }
-    .card-data__item{
-      width: 550px;
-      margin-left: 31px;
-      .card--title{
-        display:flex;
+
+    .card-data__item {
+      width: 700px;
+      margin: 4px 6px 24px 31px;
+
+      .card--title {
+        display: flex;
         justify-content: space-between;
-        .card--title__desc{}
-        .card-del{
+        margin-bottom: 6px;
+
+        .card--title__desc {
+          color: #1F2432;
+          font-family: 'Lato';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 145%;
+          margin-bottom: 6px;
+        }
+
+        .card-del {
+          border: none;
+          background: none;
           justify-content: flex-end;
         }
       }
-      .card__body{
+
+      .card__body {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        .card-description {
+          font-family: 'Lato';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+        }
+
+        .izmCol {
+          display: flex;
+
+          .decr, .incr, .count {
+
+            background: #F6F8FA;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            border: none;
+            margin-right: 2px;
+            text-align: center;
+
+            span {
+              height: 8px;
+            }
+          }
+
+          .count {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+          }
+        }
       }
-      .card__footer p{
+
+      .card__footer p {
         font-family: 'Lato';
         font-style: normal;
         font-weight: 400;
@@ -29,6 +87,20 @@
         color: #797B86;
       }
     }
+
+    .card__footer {
+      margin-top: 7px;
+
+      .art {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #797B86;
+      }
+    }
+
     .cart-item__info {
     }
 

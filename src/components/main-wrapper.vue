@@ -3,25 +3,16 @@
     <keep-alive>
       <router-view/>
     </keep-alive>
-
-    <!--    <catalog/>-->
-    <!--    <cart v-if="CART.length"-->
-    <!--    :cart_data="CART"-->
-    <!--    />-->
   </div>
 </template>
 
 <script>
-import '../styles/main-wrapper.css'
-// import catalog from './catalog'
-// import cart from './cart'
+import '../styles/other/main-wrapper.css'
 import {mapGetters} from "vuex";
 
 export default {
   name: 'mainWrapper',
   components: {
-    // catalog,
-    // cart
   },
   computed: {
     ...mapGetters([

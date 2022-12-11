@@ -5,16 +5,21 @@
       <div class="card-data__item">
         <div class="card--title">
           <p class="card--title__desc">{{ cart_item_data.name }}</p>
-          <button class="card-del" @click="deleteFromCart">&cupcap;</button>
+          <button class="card-del" @click="deleteFromCart">&#10006;</button>
         </div>
         <div class="card__body">
-<!--          <p >{{ cart_item_data.desc }}</p>-->
-          <button @click="decrementItem">-</button>
-          <p>Кол-во {{ cart_item_data.quantity }} </p>
-          <button @click="incrementItem">+</button>
+          <p class="card-description">{{cart_item_data.description}}</p>
+          <div class="izmCol">
+            <button @click="decrementItem" class="decr"><span>&mdash;</span></button>
+            <p class="count">{{ cart_item_data.quantity }} </p>
+            <button @click="incrementItem" class="incr"><span>+</span></button>
+          </div>
+          <p>{{cart_item_data.quantity * cart_item_data.price}} Р.</p>
+
         </div>
         <div class="card__footer">
-          <p >{{ cart_item_data.article }}</p>
+          <p class="art">{{ cart_item_data.article }}</p>
+          <p  v-if="cart_item_data.quantity > 1">{{ cart_item_data.price}}</p>
         </div>
       </div>
 

@@ -1,3 +1,41 @@
-.container{
-  margin-right:20px;
-}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  align-content: space-between; }
+
+  .cart-item-viewed {
+    margin-right: 20px;
+    padding: 20px;
+
+    &__image {
+      width: 245px;
+      height: 245px;
+    }
+      &__name {
+        margin-left: 60px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 120.52%;
+      }
+      &__body{
+        margin-left: 60px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 145%;
+      }
+      &__footer{
+        margin-left: 60px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 130%;
+      }
+    }
+
+
+
+
+
