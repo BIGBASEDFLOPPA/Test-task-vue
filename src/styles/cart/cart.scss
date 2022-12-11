@@ -1,5 +1,26 @@
 .task-container {
-  .task-cart-container{
-    width: 800px;
+  &__cart {
+    justify-content: center;
+    margin: 30px 15px;
+    display: flex;
+    flex-direction: row;
+
+    .task-cart-container {
+      width: 800px;
+    }
+
+    .task-cart-counter {
+      margin: 15px;
+      min-width: 425px;
+      background: #F6F8FA;
+      border-radius: 5px;
+    }
+  }
+
+  .task-container__viewed {
+    &__cart{
+      display: flex;
+    }
   }
 }
+

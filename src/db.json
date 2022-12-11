@@ -2,51 +2,51 @@
   "products": [
     {
       "url": "https://http.cat/100.jpg",
-      "name": "T-shirt 1",
-      "price": 2100,
+      "name": "Some item 1",
+      "price": 2110,
       "article": "T1",
       "available": true,
-      "category": "Мужские"
+      "description": "Some description"
     },
     {
       "url": "https://http.cat/101.jpg",
-      "name": "T-shirt 2",
+      "name": "Some item 2",
       "price": 3150,
       "article": "T2",
       "available": true,
-      "category": "Женские"
+      "description": "Some description"
     },
     {
       "url": "https://http.cat/102.jpg",
-      "name": "T-shirt 3",
-      "price": 4200,
+      "name": "Some item 3",
+      "price": 4250,
       "article": "T3",
       "available": false,
-      "category": "Женские"
+      "description": "Some description"
     },
     {
       "url": "https://http.cat/103.jpg",
-      "name": "T-shirt 4",
+      "name": "Some item 4",
       "price": 5300,
       "article": "T4",
       "available": true,
-      "category": "Мужские"
+      "description": "Some description"
     },
     {
       "url": "https://http.cat/101.jpg",
-      "name": "T-shirt 5",
-      "price": 6500,
+      "name": "Some item 5",
+      "price": 7500,
       "article": "T5",
       "available": false,
-      "category": "Женские"
+      "description": "Some description"
     },
     {
       "url": "https://http.cat/102.jpg",
-      "name": "T-shirt 6",
+      "name": "Some item 6",
       "price": 8700,
       "article": "T6",
       "available": true,
-      "category": "Женские"
+      "description": "Some description"
     }
   ]
 }

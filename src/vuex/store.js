@@ -4,7 +4,8 @@ import axios from "axios";
 export default createStore({
     state: {
         products: [],
-        cart: []
+        cart: [],
+        jsonCart: []
     },
     getters: {
         PRODUCTS(state) {
@@ -72,6 +73,17 @@ export default createStore({
                     return err;
                 })
         },
+          SEND_CART_TO_SERVER(state){
+             state.jsonCart = JSON.stringify(state.cart);
+             return axios.post('https://my-json-server.typicode.com/typicode/demo',{
+               Body: this.state.cart
+            })
+                 .then(response=>{})
+                 .catch((error)=>{
+                     console.log(error)
+                     return error;
+                 })
+          },
         ADD_TO_CART({commit}, product) {
             commit('SET_CART', product)
         },

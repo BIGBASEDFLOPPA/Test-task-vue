@@ -1,9 +1,12 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "url": "https://http.cat/100.jpg",
+      "name": "Some item 1",
+      "price": 2110,
+      "article": "T1",
+      "available": true,
+      "description": "Some description"
     }
   ],
   "comments": [

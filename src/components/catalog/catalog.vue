@@ -1,7 +1,7 @@
 <template>
   <div class="catalog">
     <router-link :to="{name:'cart',params: {CART}}">
-      <div class="catalog__count catatlog--button">Cart: {{ CART.length }}</div>
+      <div class="catalog__count catalog--button">Cart: {{ CART.length }}</div>
     </router-link>
     <h1>Catalog</h1>
 
@@ -45,6 +45,7 @@ export default {
     ...mapGetters([
       'PRODUCTS',
       'CART'
+
     ])
   },
   mounted() {
