@@ -1,6 +1,6 @@
 <template>
-  <router-link to="/">
-    <div class="catalog__link_to_cart catalog--button">Вернуться в каталог</div>
+  <router-link to="/" class="router-list">
+    <div class="router-btn">Вернуться в каталог</div>
   </router-link>
   <div class="cart-container">
     <div class="cart-container-data" v-if="CART.length!==0">
@@ -45,28 +45,27 @@
       </div>
       <div class="cart-container-data ">
         <div class="slider-viewed__title">
-          <span>Просмотренные товары</span>
+          <span class="slider-viewed__name">Просмотренные товары</span>
+          <div class="slider-viewed__moved">
+            <button
+                class="slider-viewed__btns"
+                @click="scrollPageBack"
+            >{{ `⇐` }}
+            </button>
+            <span class='slider-viewed__pages'>{{ page }}/ 6</span>
+            <button
+                class="slider-viewed__btns"
+                @click="scrollPageForward"
+            >{{ `⇒` }}
+            </button>
+          </div>
         </div>
-        <div>
-          <button
-              class="slider-viewed__btns"
-              @click="page = page - 1"
-              v-if="page > 1"
-          >{{ `⇐` }}
-          </button>
-          <span class ='slider-viewed__pages'>{{ page }}/ 6</span>
-          <button
-              class="slider-viewed__btns"
-              v-if="hasNextPage"
-              @click="page = page + 1"
-          >{{ `⇒` }}
-          </button>
-      </div>
         <div class="slider-viewed__cart">
           <CartItemViewed
-              v-for="item in changePage() "
+              v-for="(item,index) in changePage() "
               :key="item.article"
               :cart_item_data="item"
+              @increment="increment(index)"
           />
         </div>
 
@@ -116,6 +115,17 @@ export default {
       'DECREMENT_CART_ITEM',
       'DELETE_ALL_FROM_CART'
     ]),
+    scrollPageBack() {
+      let pageHelper = this.page;
+      if (pageHelper > 1)
+        this.page = pageHelper - 1;
+    },
+    scrollPageForward() {
+      let pageHelper = this.page;
+      if (pageHelper < 6 &&  this.hasNextPage) {
+        this.page = pageHelper + 1;
+      }
+    },
     deleteFromCart(index) {
       this.DELETE_FROM_CART(index);
     },

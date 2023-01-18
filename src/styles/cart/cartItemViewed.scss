@@ -1,38 +1,61 @@
 .container {
   display: flex;
   justify-content: center;
-  margin-right: 20px;
-  align-content: space-between; }
+  margin: 20px 20px 20px 10px;
+  background: #F6F8FA;
+  border: #F6F8FA solid 1px;
+  width:305px;
+  height: 563px;
+  border-radius: 5px;
+}
 
   .cart-item-viewed {
-    margin-right: 20px;
     padding: 20px;
 
+
     &__image {
+      margin-left: 25px;
+      margin-right: 35px;
       width: 245px;
       height: 245px;
     }
       &__name {
-        margin-left: 60px;
+        text-align: left;
+        margin-left: 25px;
         font-style: normal;
         font-weight: 700;
         font-size: 22px;
         line-height: 120.52%;
+        text-align: left;
+        margin-bottom: 10px;
+
       }
       &__body{
-        margin-left: 60px;
+        margin-left: 25px;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 145%;
+        text-align: left;
+        margin-bottom: 30px;
       }
       &__footer{
-        margin-left: 60px;
+        margin-left: 25px;
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
         line-height: 130%;
+        text-align: left;
+        margin-bottom: 20px;
       }
+
+    &__btn{
+      height: 52px;
+      margin-left: 25px;
+      width:255px;
+      margin-bottom: 15px;
+
+    }
     }
 
 

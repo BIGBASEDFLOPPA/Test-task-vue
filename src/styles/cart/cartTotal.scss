@@ -1,35 +1,77 @@
-.total-container  {
+.total-container {
   display: flex;
   flex-direction: column;
   text-align: justify;
   margin: 20px;
-&__results{
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 120.52%;
-}
-&__sum{
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 145%;
-}
-  &__value{
+  padding: 35px 30px 35px 30px;
+  &__total-name{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120.52%;
+    padding-bottom: 30px;
+
+  }
+  &__btn{
+    width: 365px;
+    height: 54px;
+  }
+  &__results {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120.52%;
+  }
+
+  &-sum {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 17px;
+
+    &__cost &__description {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 145%;
+
+    }
+  }
+  &-value{
+    display: flex;
+    justify-content: space-between;
     font-weight: 500;
     font-size: 16px;
     line-height: 145%;
+    padding-bottom: 17px;
+    &__vdesc &__vsum{
+    }
   }
-  &__check{
+
+  &-check{
+    display: flex;
+    justify-content: space-between;
     font-weight: 400;
     font-size: 16px;
     line-height: 145%;
+    padding-bottom: 17px;
+
+    &__check &__check2 {
+    }
   }
-  &__total{
+
+  &-total {
+    display: flex;
+    justify-content: space-between;
     font-weight: 600;
     font-size: 18px;
     line-height: 145%;
+    padding-top: 17px;
+    padding-bottom: 30px;
+    &__cost &__desc{
+    }
   }
 }
-cart-total-container_sum{
+
+cart-total-container_sum {
   padding-right: 300px;
 }
 

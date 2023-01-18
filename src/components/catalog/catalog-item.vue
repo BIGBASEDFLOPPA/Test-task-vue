@@ -3,7 +3,7 @@
     <img class="catalog-item__image" :src="product_data.url" alt="img">
     <p class="catalog-item__name">{{ product_data.name }}</p>
     <p class="catalog-item__name">{{ product_data.price }} Р/шт.</p>
-    <button class="btn" @click="addToCart">add to card</button>
+    <button class="btn" @click="addToCart">Добавить в корзину</button>
   </div>
 </template>
 

@@ -14,12 +14,12 @@
             <p class="count">{{ cart_item_data.quantity }} </p>
             <button @click="incrementItem" class="incr"><span>+</span></button>
           </div>
-          <p>{{cart_item_data.quantity * cart_item_data.price}} Р.</p>
+          <p class="card-item_sum">{{cart_item_data.quantity * cart_item_data.price}} Р.</p>
 
         </div>
         <div class="card__footer">
           <p class="art">{{ cart_item_data.article }}</p>
-          <p  v-if="cart_item_data.quantity > 1">{{ cart_item_data.price}}</p>
+          <p class="card-quant" v-if="cart_item_data.quantity > 1">{{ cart_item_data.price}} Р/шт.</p>
         </div>
       </div>
 

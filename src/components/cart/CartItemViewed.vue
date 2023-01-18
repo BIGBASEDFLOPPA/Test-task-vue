@@ -10,10 +10,14 @@
       </div>
       <div class="cart-item-viewed__footer">
         <p>{{ cart_item_data.price }} РУБ/шт</p>
-        <button class="btn"> Подробнее</button>
+      </div>
+        <button class="btn cart-item-viewed__btn"> Подробнее</button>
+        <button @click="incrementItem" class="btn cart-item-viewed__btn" >
+          Добавить в корзину
+        </button>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>

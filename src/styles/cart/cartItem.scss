@@ -53,7 +53,8 @@
         }
 
         .izmCol {
-          display: flex;
+            display: flex;
+
 
           .decr, .incr, .count {
 
@@ -92,12 +93,19 @@
       margin-top: 7px;
 
       .art {
-        font-family: 'Lato';
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 150%;
         color: #797B86;
+      }
+      .card-quant{
+        position: relative;
+        bottom: 19px;
+        margin-left: 50%;
+        font-weight: 400;
+        font-size: 12px;
+        color: #1F2432;
       }
     }
 
@@ -122,6 +130,13 @@
     .total-name {
       margin-right: 16px;
       background: #2DA5F3;
+    }
+    &_sum{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 145%;
     }
   }
 }

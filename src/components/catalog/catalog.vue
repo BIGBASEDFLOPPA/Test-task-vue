@@ -1,14 +1,20 @@
 <template>
   <div class="catalog">
-    <router-link  :to="{name:'cart',params: {CART}}">
+    <router-link  :to="{name:'cart',params: {CART}}" class="router-list">
       <div class='catalog__link-to-cart'>
         <div class="catalog__count catalog--button">
-          <p class="catalog__link-to-cart_cart-name">Ваша корзина</p>
-          <p class="catalog__link-to-cart_cart-value">товаров на сумму: {{ getOrderCost() }} </p>
+          <div class="catalog__link-to-cart__img">
+            <img class="img" :src="'https://static.tildacdn.com/tild3766-6666-4162-b933-306235383961/111.png' " alt="">
+          </div>
+          <div class="catalog__link-to-cart__description">
+            <p class="catalog__link-to-cart_cart-name">Ваша корзина</p>
+            <p class="catalog__link-to-cart_cart-cost">{{ CART.length}} ед. товара </p>
+            <p class="catalog__link-to-cart_cart-value">{{ getOrderCost() }} Р. </p>
+          </div>
         </div>
       </div>
     </router-link>
-    <h1>Catalog</h1>
+    <h1>Каталог</h1>
 
     <div class="catalog-list">
       <catalog-item
