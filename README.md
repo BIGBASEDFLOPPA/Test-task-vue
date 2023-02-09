@@ -1,5 +1,5 @@
 # test-task
-### to display products use 
+### to display products(starting fake-server) use 
 ```
 npx json-server --watch db.json
 ```
