@@ -1,5 +1,8 @@
 # test-task
-
+### to display products use 
+```
+npx json-server --watch db.json
+```
 ## Project setup
 ```
 npm install
